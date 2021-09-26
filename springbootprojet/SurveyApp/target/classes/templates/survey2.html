@@ -1,0 +1,45 @@
+<link rel="stylesheet" href="style.css">
+<style>
+body::before {
+  background-image: linear-gradient(  115deg,
+      rgba(58, 58, 158, 0.8),
+      rgba(136, 136, 206, 0.7)
+    ),
+    url(https://gloriousheights.com/wp-content/uploads/2019/02/happiness.jpg);
+}
+</style>
+<main class="container">
+  <h1 id="title">Survey-2</h1>
+  <p id="description">Are you satisfied with your life?</p>
+  <form id="survey-form" action="/survey2"  method ="POST" Content-type ="application/json">
+    <h2>Survey Participant:</h2>
+    <label for="name" id="name-label">Name</label>
+    <input class="form-control" type="text" id="name" name="name" placeholder="Enter your name here." required />
+        <label for="last-name" id="last-name-label">Last Name</label>
+        <input class="form-control" type="text" id="last-name" name="lastName" placeholder="Enter your last name here." required />
+        <fieldset>
+      <legend>What is your gender?</legend>
+      <label><input name="gender" class="input-radio" type="radio" id="male" value=1/> Male</label>
+      <label><input name="gender" class="input-radio" type="radio" id="female" value=2/> Female</label>
+      <label><input name="gender" class="input-radio" type="radio" id="unknown" value=3/> N/A</label>
+    </fieldset>
+        <label for="birthday" id="birthday-label">Birthday</label>
+        <input class="form-control" type="date" id="birthday" name="birthday" placeholder="Enter your last name here." required />
+        <label for="happiness-rate" id="happiness-rate-label">Happiness Rate</label>
+        <input class="form-control" type="number" name="happinessRate" id="happiness-rate" placeholder="How happy are you (1-10)" min=1 max=10 required />
+        <label for="happy-area">What are the things that make you happiest?</label>
+    <textarea class="input-textarea" name="happyFactors" id=happy-area ></textarea>
+            <label for="unhappy-area">What are the things that make you unhappiest?</label>
+    <textarea class="input-textarea" name="unhappyFactors" id=unhappy-area ></textarea>
+    <label for="notes">Notes</label>
+    <textarea class="input-textarea" id=notes name="notes"></textarea>
+    
+     <h2>Surveyor:</h2>
+    <label for="s-name" id="s-name-label" >Name</label>
+    <input class="form-control" type="text" id="s-name" name="surveyerName" placeholder="Enter surveyor name here." required />
+        <label for="s-last-name" id="s-last-name-label">Last Name</label>
+        <input class="form-control" type="text" id="s-last-name" name="surveyerLastName" placeholder="Enter surveyor last name here." required />
+    <br>
+    <button type="submit" id="submit" class="submit-button">SUBMIT</button>
+  </form>
+</main>

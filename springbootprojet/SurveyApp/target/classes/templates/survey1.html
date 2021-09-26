@@ -1,0 +1,46 @@
+<link rel="stylesheet" href="style.css">
+<style>
+
+body::before {
+  background-image: linear-gradient(  115deg,
+      rgba(58, 58, 158, 0.8),
+      rgba(136, 136, 206, 0.7)
+    ),
+    url(https://cdn.britannica.com/51/190751-050-147B93F7/soccer-ball-goal.jpg);
+}
+</style>
+<main class="container">
+  <h1 id="title">Football Survey</h1>
+  <p id="description">What is your supported football team?</p>
+  <form id="survey-form" action="/survey1"  method ="POST" Content-type ="application/json">
+    <h2>Survey Participant:</h2>
+    <label for="name" id="name-label">Name</label>
+    <input class="form-control" type="text" id="name" name="name" placeholder="Enter your name here." required />
+        <label for="last-name" id="last-name-label">Last Name</label>
+        <input class="form-control" type="text" id="last-name" name="lastName" placeholder="Enter your last name here." required />
+        <label for="birthday" id="birthday-label">Birthday</label>
+        <input class="form-control" type="date" id="birthday" name="birthdate" placeholder="Enter your last name here." required />
+    <fieldset>
+      <legend>What is your gender?</legend>
+      <label><input name="sex" class="input-radio" type="radio" id="male" value=1/> Male</label>
+      <label><input name="sex" class="input-radio" type="radio" id="female" value=2/> Female</label>
+      <label><input name="sex" class="input-radio" type="radio" id="unknown" value=3/> N/A</label>
+    </fieldset>
+
+    <label for="dropdown" id="dropdown-label">Football Team</label>
+    <select class="form-control" id="dropdown" name="footballTeam">
+      <option value="real-madrid">Real Madrid</option>
+      <option value="barcelona">Barcelona</option>
+    </select>
+    <label for="textarea">Notes</label>
+    <textarea class="input-textarea" id=textarea name="notes"></textarea>
+    
+     <h2>Surveyor:</h2>
+    <label for="s-name" id="s-name-label">Name</label>
+    <input class="form-control" type="text" id="s-name" name="surveyerName" placeholder="Enter surveyor name here." required />
+        <label for="s-last-name" id="s-last-name-label">Last Name</label>
+        <input class="form-control" type="text" id="s-last-name" name="surveyerLastName" placeholder="Enter surveyor last name here." required />
+    <br>
+    <button type="submit" id="submit" class="submit-button">SUBMIT</button>
+  </form>
+</main>

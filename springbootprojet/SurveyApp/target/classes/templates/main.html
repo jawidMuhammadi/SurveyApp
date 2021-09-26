@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head> 
+ <link rel="stylesheet" href="style.css">
+    <title>Getting Started: Serving Web Content</title> 
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+    <main class="container">
+  <h1 id="title">Survey Inc.</h1>
+  <p id="description">Welcome to our survey page.</p>
+    <a href="\survey2" target="_blank"><button id="submit" class="submit-button">Take a survey about hapiness</button></a>
+     <a href="\survey1" target="_blank"> <button id="submit" class="submit-button">Take a survey about football</button></a>
+  <h2>Survey statistic:</h2>
+  <p th:text="'Happiness Survey Count: ' + ${hCount}"/>
+  <p th:text="'Football Survey Count: ' + ${fCount}"/>
+</main>
+</body>
+</html>
